@@ -1,5 +1,81 @@
 /* CSS Entry Point */
 
 // Turn on freq used libraries
-// @import 'normalize-css/normalize';
+@import 'normalize-css/normalize';
 // @import 'font-awesome/scss/font-awesome';
+$size: 50px;
+
+// a {
+//   text-decoration: underline;
+//   color: rgb(242, 102, 12);
+//   font-size: 35px;
+// }
+
+.app {
+  display: flex;
+  // justify-content: center;
+}
+.main {
+  width: 700px;
+  aside {
+    display: flex;
+    flex-direction: column;
+  }
+  .view-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.con_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  img {
+    height: $size;
+    width: $size;
+    border-radius: 100%;
+  }
+}
+.form-wrapper {
+  height: 700px;
+  display: flex;
+  .drop {
+    width: 400px;
+    height: 200px;
+    .img-wrapper {
+      width: 300px;
+    }
+    img {
+      height: 200px;
+    }
+  }
+  button {
+    align-self: center;
+  }
+}
+//// Simple Serial Form ////
+.ssf {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  label {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+  }
+  input {
+    width: 77%;
+  }
+}
+//// Single Contact View ////
+
+.single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    height: 300px;
+  }
+}
