@@ -191,7 +191,10 @@ a {
     color: $dark;
   }
 }
-
+.editing .drop {
+  display: flex;
+  justify-content: center;
+}
 .hidden {
   opacity: 0;
 }

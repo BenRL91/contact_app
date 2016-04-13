@@ -12,7 +12,7 @@ render((
     <Route path='/' component={Main}>
       <IndexRoute component={Contacts}/>
       <Route path='/new' component={NewCon}/>
-      {/*<Route path='/contacts/edit/:id' component={EditView}/>*/}
+      <Route path='/edit/:id' component={EditView}/>
       <Route path='/contacts/:id' component={ContactView}/>
     </Route>
   </Router>

@@ -41,11 +41,11 @@ export default class NewCon extends Component {
             </label>
             <label>
               E-mail:
-              <input type='email' name='fullName'  placeholder='Type E-mail Here'/>
+              <input type='email' name='email'  placeholder='Type E-mail Here'/>
             </label>
             <label>
               Address:
-              <input type='address' name='fullName'  placeholder='Type Address Here'/>
+              <input type='address' name='address'  placeholder='Type Address Here'/>
             </label>
             <input type='hidden' name='pic' defaultValue={ preview }/>
             <input type='hidden' name='id' defaultValue={Math.floor(Math.random()*10000)}/>

@@ -7,10 +7,19 @@ export default class Contacts extends Component {
     super(...args);
     this.state = {data}
   }
-  // remove(con){
-  //   data.splice(data.indexOf(con), 1))
-  //   hashHistory.push('/');
-  // }
+  alphabetize(a, b) {
+  if (a.fullName.toLowerCase() > b.fullName.toLowerCase()) {
+    return 1;
+  }else if (a.fullName.toLowerCase() < b.fullName.toLowerCase()) {
+    return -1;
+  } else {
+    return 0
+  };
+};
+  componentDidMount(){
+    data.sort(this.alphabetize)
+    this.setState({data})
+  }
   removeCon(con){
       if (confirm('Are you sure you want to remove this contact?')){
       data.splice(data.indexOf(con), 1)
