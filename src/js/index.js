@@ -6,6 +6,7 @@ import Main from './main';
 import Contacts from './contacts';
 import ContactView from './contact_view';
 import NewCon from './new_con';
+import EditView from './edit';
 
 render((
   <Router history={hashHistory}>
