@@ -51,6 +51,7 @@ export default class NewCon extends Component {
             <input type='hidden' name='id' defaultValue={Math.floor(Math.random()*10000)}/>
             <button>Add Contact</button>
           </SSF>
+            <button className='cancel' onClick={()=> hashHistory.push('/')}>Cancel</button>
         </div>
     );
   }

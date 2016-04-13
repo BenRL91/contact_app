@@ -8,6 +8,7 @@ export default class Main extends Component {
       <aside className='link-wrapper'>
         <Link to='/'>Contacts</Link>
         <Link to='/new'>New Contact</Link>
+        {/*<Link className='edit-link hidden' to='/edit/:id'>Edit Contact</Link>*/}
       </aside>
       <div className='view-wrapper'>
         {this.props.children}

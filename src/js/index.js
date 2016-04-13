@@ -6,14 +6,14 @@ import Main from './main';
 import Contacts from './contacts';
 import ContactView from './contact_view';
 import NewCon from './new_con';
-// import EditView from './edit';
+import EditView from './edit';
 
 render((
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={Contacts}/>
       <Route path='/new' component={NewCon}/>
-      {/*<Route path='/contacts/edit/:id' component={EditView}/>*/}
+      <Route path='/contacts/edit/:id' component={EditView}/>
       <Route path='/contacts/:id' component={ContactView}/>
     </Route>
   </Router>

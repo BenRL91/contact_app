@@ -2,18 +2,21 @@
 
 // Turn on freq used libraries
 @import 'normalize-css/normalize';
-// @import 'font-awesome/scss/font-awesome';
+@import 'font-awesome/scss/font-awesome';
 
 $size: 50px;
 $light: rgb(245, 241, 138);
 $dark: rgb(29, 24, 4);
-$right: calc(100% - 220px);
-
+$right: calc(100% - 240px);
+$purp: rgb(52, 37, 75);
 
 * {
   font-family: fantasy;
 }
-
+.app {
+  width: 800px;
+  margin: auto;
+}
 a {
   text-decoration: none;
   color: $dark;
@@ -28,17 +31,22 @@ a {
   width: 100%;
   display: flex;
   aside {
-    background: rgb(52, 37, 75);
+    background: $purp;
     display: flex;
     flex-direction: column;
     padding: 18px;
+    width: 240px;
     a {
+      transition: all .5s;
       border: 4px solid rgb(233, 225, 26);
       color: white;
       font-size: 20px;
       text-align: center;
       margin-bottom: 10px;
       padding: 4px;
+      &:hover {
+        background-color: lighten($purp, 40%);
+      }
     }
   }
   .view-wrapper {
@@ -46,7 +54,8 @@ a {
     min-height: 800px;
     display: flex;
     flex-direction: column;
-    padding-left: 15px;
+    padding: 25px 15px;
+    background: $dark;
   }
 }
 .con_list {
@@ -57,19 +66,43 @@ a {
   padding: 0;
   margin: 0;
   li {
+    transition: all .5s;
     border: 1px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    &:hover {
+      background: darken($light, 20%);
+    }
     &:first-child {
       border-top: 2px solid black;
     }
-    border-bottom: 2px solid black;
-
+  }
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
   }
   img {
     height: $size;
     width: $size;
     border-radius: 100%;
+    margin-right: 10px;
+  }
+  button {
+    transition: all .3s;
+    background: $dark;
+    border: 1px solid $dark;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        &:hover {
+      background: red;
+    }
   }
 }
 .form-wrapper {
@@ -115,14 +148,50 @@ a {
     border: 4px solid rgb(54, 50, 48);
     width: 65%;
   }
+  button {
+    transition: all .2s;
+    border: 4px solid $dark;
+    background: darken($light, 25%);
+    &:hover {
+      background: darken($light, 50%);
+    }
+  }
+}
+.cancel {
+  transition: all .2s;
+  border: 4px solid $dark;
+  background: darken($light, 25%);
+  &:hover {
+    background: darken(red, 20%);
+  }
 }
 //// Single Contact View ////
 
 .single {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  background: $light;
+  height: 600px;
+  padding-bottom: 30px;
   img {
     height: 300px;
+    border-radius: 10px;
+    border: 3px solid darken($purp, 10%);
+    margin: 20px;
   }
+  span {
+    align-self: flex-start;
+    // border-left: 1px solid $dark;
+    // border-right: 1px solid $dark;
+    margin-left: 30px;
+    border-bottom: 2px solid darken($purp, 10%);
+    font-size: 40px;
+    color: $dark;
+  }
+}
+
+.hidden {
+  opacity: 0;
 }

@@ -11,6 +11,12 @@ export default class Contacts extends Component {
   //   data.splice(data.indexOf(con), 1))
   //   hashHistory.push('/');
   // }
+  removeCon(con){
+      if (confirm('Are you sure you want to remove this contact?')){
+      data.splice(data.indexOf(con), 1)
+      hashHistory.push('/')
+    }
+  }
   makeContact(con){
     return(
     <li key={con.id}>
@@ -18,9 +24,7 @@ export default class Contacts extends Component {
         <img src={con.pic} alt={con.fullName}/>
         <span>{con.fullName}</span>
       </Link>
-      <button onClick={()=>{
-        data.splice(data.indexOf(con), 1)
-        hashHistory.push('/')}}>X</button>
+      <button onClick={()=> ::this.removeCon(con)}>X</button>
     </li>
     )
   }
