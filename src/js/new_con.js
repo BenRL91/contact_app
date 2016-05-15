@@ -33,7 +33,7 @@ export default class NewCon extends Component {
           <SSF className='ssf' onData={::this.dataHandler}>
             <label>
               Name:
-              <input type='text' name='fullName'  placeholder='Type Name Here'/>
+              <input type='text' name='name'  placeholder='Type Name Here'/>
             </label>
             <label>
               Phone:
@@ -45,10 +45,10 @@ export default class NewCon extends Component {
             </label>
             <label>
               Address:
-              <input type='address' name='address'  placeholder='Type Address Here'/>
+              <input type='address' name='location'  placeholder='Type Address Here'/>
             </label>
-            <input type='hidden' name='pic' defaultValue={ preview }/>
-            <input type='hidden' name='id' defaultValue={Math.floor(Math.random()*10000)}/>
+            <input type='hidden' name='photo' defaultValue={ preview }/>
+            {/*<input type='hidden' name='_id' defaultValue={Math.floor(Math.random()*10000)}/>*/}
             <button>Add Contact</button>
           </SSF>
             <button className='cancel' onClick={()=> hashHistory.push('/')}>Cancel</button>
